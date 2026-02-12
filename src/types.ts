@@ -1,5 +1,12 @@
 import type { InferSelectModel, InferInsertModel } from "drizzle-orm";
 import { todos, user, session, account } from "@/db/schema";
-
+import { auth } from "@/lib/auth";
 
 export type Todo = InferSelectModel<typeof todos>;
+
+export type HonoEnv = {
+  Variables: {
+    user: typeof auth.$Infer.Session.user | null;
+    session: typeof auth.$Infer.Session.session | null;
+  };
+};
