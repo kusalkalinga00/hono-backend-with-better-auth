@@ -1,9 +1,9 @@
 import { db } from "@/db/db";
-import { Todo } from "@/types";
+import { NewTodo, Todo } from "@/types";
 import { todos } from "@/db/schema";
 import { desc, eq } from "drizzle-orm";
 
-export const insertTodo = async (todo: Todo) => {
+export const insertTodo = async (todo: NewTodo) => {
   const [result] = await db.insert(todos).values(todo).returning();
   return result;
 };
