@@ -10,11 +10,13 @@
     "open-auth-docs": "open-cli http://localhost:3000/api/auth/reference"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
     "better-auth": "^1.4.18",
     "drizzle-orm": "^0.45.1",
     "drizzle-seed": "^0.3.1",
     "hono": "^4.11.9",
-    "pg": "^8.18.0"
+    "pg": "^8.18.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/bun": "latest",

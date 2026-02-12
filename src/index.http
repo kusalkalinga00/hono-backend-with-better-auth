@@ -1,1 +1,36 @@
-http://localhost:3000
+POST http://localhost:3000/api/todos
+Content-Type: application/json
+
+{
+    "title": "Buy groceries",
+    "description": "Milk, Bread, Eggs, and Butter"
+}
+
+###
+
+POST http://localhost:3000/api/auth/sign-in/email
+Content-Type: application/json
+
+{
+  "email": "kusal.perf@gmail.com",
+  "password": "Kusal@1999"
+}
+
+###
+GET http://localhost:3000/api/todos
+
+
+###
+
+PUT http://localhost:3000/api/todos/62188c97-b070-4355-87bb-538d1be427db
+Content-Type: application/json
+
+{
+    "title": "Buy groceries and fruits",
+    "description": "Milk, Bread, Eggs, Butter, and Apples"
+}
+
+###
+DELETE http://localhost:3000/api/todos/62188c97-b070-4355-87bb-538d1be427db
+
+
